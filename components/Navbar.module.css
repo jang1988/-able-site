@@ -1,0 +1,75 @@
+.header {
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: #2563eb; /* синий hover */
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.link {
+  text-decoration: none;
+	text-transform: uppercase;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #2563eb;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #222;
+  cursor: pointer;
+}
+
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #f3f3f3;
+    border-top: 1px solid #ddd;
+    padding: 16px 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
