@@ -1,0 +1,152 @@
+.footer {
+  background-color: #f3f3f3;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  z-index: 10;
+  color: #fff;
+}
+
+.navLink:hover {
+  color: #007bff;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialIcon {
+  font-size: 1.25rem;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  z-index: 10;
+  color: #fff;
+}
+
+.socialIcon:hover {
+  opacity: 0.7;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  z-index: 10;
+  text-align: center;
+}
+
+.imageDecoration {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* ===============================
+   📱 Адаптивность
+================================*/
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .socialIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 0.8rem;
+  }
+
+  .bottomSection {
+    font-size: 0.8rem;
+  }
+
+  .socialLinks {
+    gap: 0.75rem;
+  }
+
+  .footer {
+    padding: 1.5rem 0;
+  }
+}

@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // Разрешить доступ с других устройств в разработке
+  allowedDevOrigins: [
+    'localhost',
+    '127.0.0.1',
+    '192.168.1.179', // Конкретный IP
+    '*.local', // Все .local домены
+    'local-origin.dev', // Пример кастомного домена
+  ],
+  
+  // Или разрешить все origins (не рекомендуется для продакшена)
+  allowedDevOrigins: process.env.NODE_ENV === 'development' ? ['*'] : [],
+}
 
-export default nextConfig;
+export default nextConfig

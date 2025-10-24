@@ -7,7 +7,7 @@ export default function Solutions() {
 		<div className={styles.container}>
 			<div className={styles.imageSection}>
 				<Image
-					src='/drilling.webp'
+					src='/cabekSkyFull.webp'
 					alt='Hero background'
 					width={800}
 					height={600}

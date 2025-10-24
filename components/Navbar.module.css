@@ -23,10 +23,6 @@
   transition: color 0.2s ease;
 }
 
-.logo:hover {
-  color: #2563eb; /* синий hover */
-}
-
 .nav {
   display: flex;
   gap: 2rem;
