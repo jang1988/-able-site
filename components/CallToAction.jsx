@@ -5,13 +5,15 @@ export default function CallToAction() {
 		<section className={styles.section}>
 			<div className={styles.contentWrapper}>
 				<div className={styles.content}>
-					<h1 className={styles.title}>Power your infrastructure now</h1>
+					<h1 className={styles.title}>
+						Zwiększ wydajność swojej infrastruktury już teraz
+					</h1>
 					<p className={styles.text}>
-						Transform complex electrical challenges with our precision
-						underground network engineering solutions.
+						Zmieniaj złożone wyzwania elektryczne dzięki naszym precyzyjnym
+						rozwiązaniom inżynierii sieciowej
 					</p>
 					<a href='tel:+1234567890' className={styles.button}>
-						Call us now
+						Zadzwoń do nas teraz
 					</a>
 				</div>
 			</div>

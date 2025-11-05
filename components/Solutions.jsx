@@ -7,8 +7,8 @@ export default function Solutions() {
 		<div className={styles.container}>
 			<div className={styles.imageSection}>
 				<Image
-					src='/cabekSkyFull.webp'
-					alt='Hero background'
+					src='/budowa.webp'
+					alt='Budowa'
 					width={800}
 					height={600}
 					priority
@@ -17,37 +17,34 @@ export default function Solutions() {
 			</div>
 
 			<div className={styles.contentSection}>
-				<h1 className={styles.title}>
-					Advanced electrical infrastructure solutions
-				</h1>
-
-				<p className={styles.description}>
-					We deliver cutting-edge underground electrical networks that transform
-					power distribution. Our compact transformer stations maximize
-					efficiency and reliability.
+				<p className={styles.title}>
+					Budowa, modernizacja i remont linii kablowych wysokiego, średniego i
+					niskiego napięcia. Skablowania linii napowietrznych.
 				</p>
 
 				<div className={styles.features}>
 					<div className={styles.feature}>
 						<Package className={styles.featureIcon} size={24} />
-						<span>Minimal ground disruption</span>
+						<span>Minimalna ingerencja w teren</span>
 					</div>
 
 					<div className={styles.feature}>
 						<Package className={styles.featureIcon} size={24} />
-						<span>Underground cable systems with precision engineering</span>
+						<span>Podziemne linie kablowe z precyzyjną inżynierią</span>
 					</div>
 
 					<div className={styles.feature}>
 						<Package className={styles.featureIcon} size={24} />
-						<span>Sustainable infrastructure</span>
+						<span>Zrównoważona infrastruktura</span>
 					</div>
 				</div>
 
 				<div className={styles.buttons}>
-					<button className={styles.primaryButton}>Explore</button>
+					<button className={styles.primaryButton}>
+						<span>Odkrywaj</span>
+					</button>
 					<button className={styles.secondaryButton}>
-						Details
+						Szczegóły
 						<ChevronRight size={20} />
 					</button>
 				</div>

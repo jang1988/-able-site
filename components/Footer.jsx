@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -6,24 +7,29 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={styles.container}>
 				<div className={styles.content}>
-					<div className={styles.logo}>Logo</div>
+					<Link href='/' className={styles.logo}>
+						<Image src='/logo.webp' alt='logo' width={130} height={50} />
+					</Link>
 
 					<nav className={styles.nav}>
-						<a href='#services' className={styles.navLink}>
-							Services
-						</a>
-						<a href='#projects' className={styles.navLink}>
-							Projects
-						</a>
-						<a href='#about' className={styles.navLink}>
-							About
-						</a>
-						<a href='#contact' className={styles.navLink}>
-							Contact
-						</a>
-						<a href='#careers' className={styles.navLink}>
-							Careers
-						</a>
+						<Link href='/o-nas' className={styles.navLink}>
+							O nas
+						</Link>
+						<Link href='/oferta' className={styles.navLink}>
+							Oferta
+						</Link>
+						<Link href='/galeria' className={styles.navLink}>
+							Galeria
+						</Link>
+						<Link href='/sprzęt' className={styles.navLink}>
+							Dostępnz sprzęt
+						</Link>
+						<Link href='/referencje' className={styles.navLink}>
+							Referencje
+						</Link>
+						<Link href='/kontakt' className={styles.navLink}>
+							Kontakt
+						</Link>
 					</nav>
 
 					<div className={styles.socialLinks}>
@@ -102,20 +108,7 @@ const Footer = () => {
 						</a>
 					</div>
 				</div>
-
-
-				<div className={styles.bottomSection}>
-					<div>© 2024 Electrical Networks. All rights reserved.</div>
-				</div>
 			</div>
-
-			<Image
-				src='/kV2.webp'
-				alt='Company logo'
-				className={styles.imageDecoration}
-				width={1156}
-				height={867}
-			/>
 		</footer>
 	);
 };

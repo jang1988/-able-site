@@ -7,71 +7,54 @@ export default function Gallery() {
 			<div className={styles.inner}>
 				{/* Левая часть — текст */}
 				<div className={styles.textBlock}>
-					<h1 className={styles.title}>Empowering modern infrastructure</h1>
+					<h1 className={styles.title}>Farmy Wiatrowe</h1>
 
 					<p className={styles.description}>
-						Our underground systems revolutionize energy distribution with
-						precision, safety, and design aesthetics that stand the test of time.
+						Projektujemy i realizujemy farmy wiatrowe, dostarczając nowoczesne
+						rozwiązania dla zrównoważonej i czystej energii przyszłości
 					</p>
-
-					<div className={styles.authorBlock}>
-						<div>
-							<p className={styles.name}>Michael Roberts</p>
-							<p className={styles.position}>
-								Infrastructure Director, Energy Corp
-							</p>
-						</div>
-
-						<Image
-							src="/fakeLogo.svg"
-							alt="Company logo"
-							width={80}
-							height={80}
-							className={styles.logo}
-						/>
-					</div>
 				</div>
 
 				{/* Правая часть — галерея */}
 				<div className={styles.gallery}>
 					<div className={`${styles.imageWrapper} ${styles.tall}`}>
 						<Image
-							src="/cabelSky.webp"
-							alt="Drilling operation"
+							src='/veter5.gif'
+							alt='Drilling operation'
 							fill
 							className={styles.image}
 						/>
-						<div className={styles.overlay}>Drilling systems</div>
+						<div className={styles.overlay}>Odnawialne źródła energii</div>
 					</div>
 
 					<div className={styles.imageWrapper}>
 						<Image
-							src="/gibkaja.webp"
-							alt="Transformer station"
+							src='/veter2.webp'
+							alt='Transformer station'
 							fill
 							className={styles.image}
 						/>
-						<div className={styles.overlay}>Transformer stations</div>
+						<div className={styles.overlay}>Wysoka efektywność</div>
 					</div>
 
 					<div className={styles.imageWrapper}>
 						<Image
-							src="/pipes.webp"
-							alt="Underground cable line"
+							src='/veter3.webp'
+							alt='Underground cable line'
 							fill
 							className={styles.image}
 						/>
-						<div className={styles.overlay}>Underground cabling</div>
+						<div className={styles.overlay}>Niskie koszty eksploatacji</div>
 					</div>
 
 					<div className={`${styles.imageWrapper} ${styles.wide}`}>
 						<Image
-							src="/corrugated.webp"
-							alt="Protective conduit system"
+							src='/veter1.webp'
+							alt='Protective conduit system'
 							fill
 							className={styles.image}
 						/>
-						<div className={styles.overlay}>Protective conduit systems</div>
+						<div className={styles.overlay}>Integracja z siecią</div>
 					</div>
 				</div>
 			</div>

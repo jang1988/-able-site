@@ -6,14 +6,14 @@
 	justify-content: flex-start;
 	position: relative;
 	overflow: hidden;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
 		url('../public/cabekSkyFull.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	margin-top: 50px;
+	/* margin-top: 50px; */
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.9);
-
+	z-index: 2;
 }
 
 .contentWrapper {
@@ -28,7 +28,7 @@
 }
 
 .content {
-	max-width: 700px;
+	max-width: 900px;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
@@ -46,7 +46,7 @@
 	background-clip: text;
 	margin-bottom: 8px;
 	letter-spacing: -0.5px;
-	max-width: 900px;
+	max-width: 1200px;
 }
 
 .text {
@@ -75,7 +75,8 @@
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	max-width: 200px;
+	max-width: 310px;
+	text-transform: uppercase;
 }
 
 .button::before {
@@ -153,21 +154,5 @@
 	.button {
 		padding: 14px 32px;
 		font-size: 1rem;
-	}
-}
-
-/* Анимация появления */
-.content {
-	animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
 	}
 }

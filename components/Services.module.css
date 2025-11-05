@@ -4,7 +4,7 @@
   background-color: #1a1a1a;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url('../public/gibkaja.webp');
+    url('../public/stacji.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13,6 +13,7 @@
   align-items: center;
   position: relative;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.9);
+  z-index: 2;
 }
 
 .title {
@@ -30,7 +31,7 @@
   font-size: 1.4rem;
   line-height: 1.6;
   color: #e0e0e0;
-  margin: 0 0 4rem 0;
+  margin: 0 0 2rem 0;
   max-width: 800px;
   font-weight: 400;
 }
@@ -39,7 +40,7 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -76,9 +77,8 @@
 }
 
 .columnTitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   color: #fff;
   line-height: 1.4;
 }
@@ -100,13 +100,16 @@
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 50px;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: all 0.4s ease;
   cursor: pointer;
-  background: linear-gradient(45deg, #000000, #333333);
+  background: linear-gradient(45deg, #004d00, #2E8B57); /* лесная зелень */
   letter-spacing: 0.5px;
   position: relative;
   overflow: hidden;
+  box-shadow:
+  0 0 30px rgba(46, 139, 87, 0.7),
+  0 0 60px rgba(46, 139, 87, 0.4);
 }
 
 .learnMore::before {
@@ -116,7 +119,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 

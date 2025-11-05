@@ -5,9 +5,8 @@ import Services from '@/components/Services'
 import Gallery from '@/components/Gallery'
 import ContactInfo from '@/components/ContactInfo'
 import CallToAction from '@/components/CallToAction'
-import ClientVoices from '@/components/ClientVoices'
-import Faq from '@/components/Faq'
 import Footer from '@/components/Footer'
+import Panel from '@/components/Panel'
 
 export default function Home() {
   return (
@@ -16,10 +15,9 @@ export default function Home() {
       <Solutions />
       <Services />
       <Gallery />
+      <Panel />
       <ContactInfo />
       <CallToAction />
-      <ClientVoices />
-      <Faq />
       <Footer />
     </div>
   );

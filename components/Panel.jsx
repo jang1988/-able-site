@@ -1,13 +1,13 @@
 import { PhoneCall } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Hero.module.css';
+import styles from './Panel.module.css';
 
-export default function Hero() {
+export default function Panel() {
 	return (
 		<section className={styles.hero}>
 			<Image
-				src='/power-lines.webp'
+				src='/panel2.webp'
 				alt='Hero background'
 				fill
 				priority
@@ -17,22 +17,16 @@ export default function Hero() {
 			<div className={styles.overlay}>
 				<div className={styles.textBlock}>
 					<p className={styles.title}>
-						Budowa i modernizacja linii napowietrznych
-						<br />
-						6-30kV
+					Elektrownie fotowoltaiczne. Nowoczesne rozwiązania dla Twojej firmy
 					</p>
 
 					<div className={styles.wrapper}>
 						<p className={styles.description}>
-							Dostarczamy bezpieczne, efektywne i nowoczesne rozwiązania
-							energetyczne, które wspierają rozwój Twojego biznesu i zapewniają
-							niezawodne dostawy energii na lata
+						Projektujemy i budujemy elektrownie fotowoltaiczne,
+						zapewniając efektywne i niezawodne źródła energii słonecznej, które obniżają koszty i wspierają zrównoważony rozwój Twojej firmy
 						</p>
 
 						<div className={styles.buttons}>
-							<Link href='/kontakt' className={styles.btnPrimary}>
-								<span>Kontakt</span>
-							</Link>
 							<a href='tel:+48123456789' className={styles.btnSecondary}>
 								<span>ZADZWOŃ</span>
 								<PhoneCall size={18} />

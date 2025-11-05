@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import styles from "./Navbar.module.css";
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "O nas", href: "/o-nas" },
     { name: "Oferta", href: "/oferta" },
-    { name: "Realizacje", href: "/realizacje" },
-    { name: "Kariera", href: "/kariera" },
-    { name: "Aktualności", href: "/aktualnosci" },
+    { name: "Galeria", href: "/galeria" },
+    { name: "Dostępnz sprzęt", href: "/sprzęt" },
+    { name: "Referencje", href: "/referencje" },
     { name: "Kontakt", href: "/kontakt" },
   ];
 
@@ -21,7 +22,12 @@ export default function Navbar() {
     <header id="header-outer" className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          LOGO
+          <Image
+            src="/logo.webp"
+            alt="logo"
+            width={130}
+            height={50}
+          />
         </Link>
 
         {/* --- ДЕСКТОПНОЕ МЕНЮ --- */}

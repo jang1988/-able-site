@@ -3,7 +3,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 0;
 }
 
 .container {
@@ -16,11 +16,11 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #222;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
 }
 
 .nav {
@@ -35,10 +35,12 @@
 	text-transform: uppercase;
   color: inherit;
   transition: color 0.2s ease;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 .link:hover {
-  color: #2563eb;
+  color: #0066cc;
 }
 
 .burger {
@@ -50,22 +52,34 @@
 }
 
 /* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
-@media (max-width: 768px) {
+@media (max-width: 940px) {
+.header {
+ z-index: 10;
+  }
   .nav {
     display: none;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     background-color: #f3f3f3;
-    border-top: 1px solid #ddd;
     padding: 16px 0;
+    
   }
-
+  
   .nav.open {
     display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
   }
 
   .burger {
     display: block;
+  }
+
+  .logo {
+    display: none;
+  
   }
 }
