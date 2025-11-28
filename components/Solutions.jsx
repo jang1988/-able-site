@@ -7,7 +7,7 @@ export default function Solutions() {
 		<div className={styles.container}>
 			<div className={styles.imageSection}>
 				<Image
-					src='/budowa.webp'
+					src='/power-lines.webp'
 					alt='Budowa'
 					width={800}
 					height={600}
@@ -39,7 +39,7 @@ export default function Solutions() {
 					</div>
 				</div>
 
-				<div className={styles.buttons}>
+				{/* <div className={styles.buttons}>
 					<button className={styles.primaryButton}>
 						<span>Odkrywaj</span>
 					</button>
@@ -47,7 +47,7 @@ export default function Solutions() {
 						Szczegóły
 						<ChevronRight size={20} />
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

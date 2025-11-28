@@ -37,9 +37,9 @@ export default function Services() {
 					</p>
 				</div>
 			</div>
-			<div className={styles.buttons}>
+			{/* <div className={styles.buttons}>
 				<button className={styles.learnMore}>Dowiedz się więcej</button>
-			</div>
+			</div> */}
 		</div>
 	);
 }

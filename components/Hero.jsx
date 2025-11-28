@@ -7,7 +7,7 @@ export default function Hero() {
 	return (
 		<section className={styles.hero}>
 			<Image
-				src='/power-lines.webp'
+				src='/budowa2.webp'
 				alt='Hero background'
 				fill
 				priority
@@ -29,7 +29,7 @@ export default function Hero() {
 							niezawodne dostawy energii na lata
 						</p>
 
-						<div className={styles.buttons}>
+						{/* <div className={styles.buttons}>
 							<Link href='/kontakt' className={styles.btnPrimary}>
 								<span>Kontakt</span>
 							</Link>
@@ -37,7 +37,7 @@ export default function Hero() {
 								<span>ZADZWOŃ</span>
 								<PhoneCall size={18} />
 							</a>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

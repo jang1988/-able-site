@@ -26,12 +26,12 @@ export default function Panel() {
 						zapewniając efektywne i niezawodne źródła energii słonecznej, które obniżają koszty i wspierają zrównoważony rozwój Twojej firmy
 						</p>
 
-						<div className={styles.buttons}>
+						{/* <div className={styles.buttons}>
 							<a href='tel:+48123456789' className={styles.btnSecondary}>
 								<span>ZADZWOŃ</span>
 								<PhoneCall size={18} />
 							</a>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

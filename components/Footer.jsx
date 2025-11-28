@@ -22,7 +22,7 @@ const Footer = () => {
 							Galeria
 						</Link>
 						<Link href='/sprzęt' className={styles.navLink}>
-							Dostępnz sprzęt
+							Dostępny sprzęt
 						</Link>
 						<Link href='/referencje' className={styles.navLink}>
 							Referencje
