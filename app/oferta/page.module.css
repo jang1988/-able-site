@@ -1,0 +1,114 @@
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 10px;
+	overflow: hidden;
+	animation: fadeIn 0.8s ease forwards;
+}
+
+/* Декоративные фоновые изображения */
+.wrapper::after,
+.wrapper::before {
+	content: '';
+	position: absolute;
+	background-image: url('/kv2.webp');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.wrapper::after {
+	top: 40%;
+	right: -10%;
+	width: 80vh;
+	height: 100vh;
+	transform: translateY(-50%) rotate(270deg);
+}
+
+.wrapper::before {
+	top: 50%;
+	left: -25%;
+	width: 100vh;
+	height: 50vh;
+	transform: translateY(-50%) rotate(90deg);
+}
+
+/* Контейнер */
+.container {
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	animation: fadeInUp 1s ease forwards;
+}
+
+.title {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+/* Текстовый список */
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0.5px;
+	padding-left: 20px;
+}
+
+.list li {
+	position: relative;
+	padding-left: 12px;
+	animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.wrapper {
+		min-height: 70vh;
+		padding: 40px 20px;
+		align-items: flex-start;
+		padding-top: 80px;
+	}
+
+	.wrapper::after,
+	.wrapper::before {
+		width: 30vh;
+		height: 70vh;
+	}
+
+	.wrapper::after {
+		right: -15%;
+		top: 30%;
+	}
+
+	.wrapper::before {
+		left: -15%;
+		top: 70%;
+	}
+
+	.container {
+		max-width: 100%;
+		gap: 20px;
+		padding: 20px;
+	}
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+	0% { opacity: 0; transform: translateY(20px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}

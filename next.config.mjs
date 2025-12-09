@@ -8,7 +8,10 @@ const nextConfig = {
     '*.local', // Все .local домены
     'local-origin.dev', // Пример кастомного домена
   ],
-  
+  images: {
+    qualities: [25, 50, 75, 85, 100],
+  },
+
   // Или разрешить все origins (не рекомендуется для продакшена)
   allowedDevOrigins: process.env.NODE_ENV === 'development' ? ['*'] : [],
 }

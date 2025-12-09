@@ -23,6 +23,7 @@ export default function Gallery() {
 							alt='Drilling operation'
 							fill
 							className={styles.image}
+							unoptimized
 						/>
 						<div className={styles.overlay}>Odnawialne źródła energii</div>
 					</div>
