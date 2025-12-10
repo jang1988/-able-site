@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "O nas", href: "/o-nas" },
     { name: "Oferta", href: "/oferta" },
     { name: "Galeria", href: "/galeria" },
-    { name: "Dostępny sprzęt", href: "/sprzęt" },
+    { name: "Dostępny sprzęt", href: "/sprzet" },
     { name: "Referencje", href: "/referencje" },
     { name: "Kontakt", href: "/kontakt" },
   ];

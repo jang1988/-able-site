@@ -21,7 +21,7 @@ const Footer = () => {
 						<Link href='/galeria' className={styles.navLink}>
 							Galeria
 						</Link>
-						<Link href='/sprzęt' className={styles.navLink}>
+						<Link href='/sprzet' className={styles.navLink}>
 							Dostępny sprzęt
 						</Link>
 						<Link href='/referencje' className={styles.navLink}>
