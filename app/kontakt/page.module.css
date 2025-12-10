@@ -1,0 +1,223 @@
+.container {
+  background-color: #f3f3f3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.cardInner {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+}
+
+/* === Карточка === */
+.card {
+	flex: 1 1 320px;
+	background: linear-gradient(145deg, #ffffff, #f7f9fc);
+	border-radius: 20px;
+	padding: 24px 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 24px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 200%;
+	height: 100%;
+	background: linear-gradient(120deg, rgba(0, 102, 204, 0.05), transparent 70%);
+	transform: skewX(-20deg);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	z-index: 1;
+}
+
+.card:hover::before {
+	opacity: 1;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+	background: linear-gradient(145deg, #ffffff, #eef3fa);
+}
+
+/* === Иконка === */
+.icon {
+	width: 64px;
+	height: 64px;
+	color: #0066cc;
+	margin-bottom: 12px;
+	transition: transform 0.4s ease, color 0.4s ease;
+	z-index: 2;
+}
+
+.card:hover .icon {
+	transform: scale(1.15) rotate(5deg);
+	color: #004c99;
+}
+
+/* === Заголовок === */
+.title {
+	font-size: 1.8rem;
+	font-weight: 800;
+	line-height: 1.1;
+	color: #000000;
+	background: linear-gradient(135deg, #000000 0%, #333333 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	letter-spacing: -0.5px;
+}
+
+/* === Текст === */
+.description {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	color: #4a5568;
+	font-weight: 400;
+}
+
+/* === Ссылка === */
+.link {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #0066cc;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+	z-index: 2;
+}
+
+.link:hover {
+	color: #004c99;
+}
+
+.imageDecoration {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 5;
+	bottom: -100;
+	pointer-events: none;
+}
+
+@keyframes fadeInUp {
+	0% { opacity: 0; transform: translateY(20px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* ===== Адаптивность ===== */
+
+@media (max-width: 1024px) {
+	.container {
+		gap: 30px;
+		padding: 60px 30px;
+	}
+
+	.imageDecoration {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		pointer-events: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		padding: 50px 20px;
+	}
+
+	.card {
+		width: 100%;
+		max-width: 500px;
+		padding: 36px 24px;
+	}
+
+	.description {
+		font-size: 0.95rem;
+	}
+
+	.cardInner {
+		gap: 24px;
+	}
+
+	.title {
+		font-size: 1.4rem;
+	}
+
+	.imageDecoration {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		z-index: 5;
+		bottom: 0;
+		pointer-events: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 40px 16px;
+	}
+
+	.card {
+		padding: 30px 20px;
+		gap: 16px;
+	}
+
+	.icon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.title {
+		font-size: 1.4rem;
+	}
+
+	.description,
+	.link {
+		font-size: 0.9rem;
+	}
+
+	.imageDecoration {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		z-index: 5;
+		pointer-events: none;
+	}
+}

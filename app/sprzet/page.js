@@ -2,8 +2,18 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
-	title: 'Sprzet | BIGBUD',
-	description: 'Galeria naszych realizacji energetycznych',
+	title: 'Sprzęt | BIGBUD',
+	description: 'Galeria naszych realizacji energetycznych oraz sprzętu używanego przy realizacjach BIGBUD.',
+	openGraph: {
+		title: 'Sprzęt | BIGBUD',
+		description: 'Zobacz sprzęt, którego używamy przy projektach energetycznych i infrastrukturalnych.',
+		images: ['/tech1.webp'],
+		type: 'website',
+		locale: 'pl_PL',
+	},
+	alternates: {
+		canonical: '/sprzet',
+	},
 };
 
 const galleryImages = [

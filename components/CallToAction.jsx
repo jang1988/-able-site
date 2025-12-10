@@ -12,7 +12,7 @@ export default function CallToAction() {
 						Zmieniaj złożone wyzwania elektryczne dzięki naszym precyzyjnym
 						rozwiązaniom inżynierii sieciowej
 					</p>
-					<a href='tel:+1234567890' className={styles.button}>
+					<a href='tel:795 216 920' className={styles.button}>
 						Zadzwoń do nas teraz
 					</a>
 				</div>
