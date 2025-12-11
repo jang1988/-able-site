@@ -15,7 +15,7 @@
 .wrapper::before {
 	content: '';
 	position: absolute;
-	background-image: url('/kv2.webp');
+	background-image: url('/kV2.webp');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
