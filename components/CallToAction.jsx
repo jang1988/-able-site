@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './CallToAction.module.css';
 
 export default function CallToAction() {
@@ -12,9 +13,9 @@ export default function CallToAction() {
 						Zmieniaj złożone wyzwania elektryczne dzięki naszym precyzyjnym
 						rozwiązaniom inżynierii sieciowej
 					</p>
-					<a href='tel:795 216 920' className={styles.button}>
+					<Link href="/kontakt" className={styles.button}>
 						Zadzwoń do nas teraz
-					</a>
+					</Link>
 				</div>
 			</div>
 		</section>

@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "Galeria", href: "/galeria" },
     { name: "Dostępny sprzęt", href: "/sprzet" },
     { name: "Referencje", href: "/referencje" },
+    { name: "Rodo", href: "/rodo" },
     { name: "Kontakt", href: "/kontakt" },
   ];
 

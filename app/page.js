@@ -1,11 +1,13 @@
+// app/page.js
 import Solutions from '@/components/Solutions'
 import styles from "./page.module.css";
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Gallery from '@/components/Gallery'
-import ContactInfo from '@/components/ContactInfo'
 import CallToAction from '@/components/CallToAction'
 import Panel from '@/components/Panel'
+import Cooperation from '@/components/Cooperation'
+import ScrollAnimation from '@/components/ScrollAnimation'
 
 export const metadata = {
   title: 'BIGBUD – Budowa i modernizacja linii energetycznych 6–30kV',
@@ -34,12 +36,24 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Hero />
-      <Solutions />
-      <Services />
-      <Gallery />
-      <Panel />
-      <ContactInfo />
-      <CallToAction />
+      <ScrollAnimation>
+        <Solutions />
+      </ScrollAnimation>
+      <ScrollAnimation delay={0.2}>
+        <Services />
+      </ScrollAnimation>
+      <ScrollAnimation delay={0.1}>
+        <Gallery />
+      </ScrollAnimation>
+      <ScrollAnimation direction="right">
+        <Panel />
+      </ScrollAnimation>
+      <ScrollAnimation direction="left">
+        <Cooperation />
+      </ScrollAnimation>
+      <ScrollAnimation direction="right">
+        <CallToAction />
+      </ScrollAnimation>
     </div>
   );
 }

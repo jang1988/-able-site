@@ -27,6 +27,9 @@ const Footer = () => {
 						<Link href='/referencje' className={styles.navLink}>
 							Referencje
 						</Link>
+						<Link href='/rodo' className={styles.navLink}>
+							Rodo
+						</Link>
 						<Link href='/kontakt' className={styles.navLink}>
 							Kontakt
 						</Link>

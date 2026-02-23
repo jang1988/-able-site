@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 /* === HEADER === */
 .header {
 	position: fixed;
@@ -40,12 +42,13 @@
 
 .link {
 	color: #fff;
-	font-weight: 500;
-	font-size: 1.1rem;
+	font-weight: 600;
+	/* font-size: 1.1rem; */
 	text-decoration: none;
 	position: relative;
 	transition: color 0.3s;
 	text-transform: uppercase;
+	   font-family: "Michroma", sans-serif;
 }
 
 .link::after {
@@ -116,7 +119,7 @@
 }
 
 /* === Adaptive === */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 	.navDesktop {
 		display: none;
 	}

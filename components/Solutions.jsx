@@ -18,8 +18,9 @@ export default function Solutions() {
 
 			<div className={styles.contentSection}>
 				<p className={styles.title}>
-					Budowa, modernizacja i remont linii kablowych wysokiego, średniego i
-					niskiego napięcia. Skablowania linii napowietrznych.
+					Budowa i modernizacja linii napowietrznych
+						<br />
+						6-30kV
 				</p>
 
 				<div className={styles.features}>

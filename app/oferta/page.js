@@ -11,8 +11,8 @@ export default function Oferta() {
 			<div className={styles.container}>
 				<h1 className={styles.title}>Oferta</h1>
 				<ul className={styles.list}>
-					<li>Budowa i modernizacja linii napowietrznych 6-30kV</li>
 					<li>Budowa, modernizacja i remont linii kablowych wysokiego, średniego i niskiego napięcia</li>
+					<li>Budowa i modernizacja linii napowietrznych 6-30kV</li>
 					<li>Skablowania linii napowietrznych</li>
 					<li>Wykonanie kanalizacji światłowodowej</li>
 					<li>Budowa i modernizacja stacji elektroenergetycznych NN i SN</li>
