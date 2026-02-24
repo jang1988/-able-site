@@ -40,40 +40,192 @@
 	gap: 2rem;
 }
 
+/* Современный стиль с градиентами и стеклянным эффектом */
 .link {
-	color: #fff;
-	font-weight: 600;
-	/* font-size: 1.1rem; */
-	text-decoration: none;
-	position: relative;
-	transition: color 0.3s;
-	text-transform: uppercase;
-	   font-family: "Michroma", sans-serif;
+    position: relative;
+    color: #ffffff;
+    font-family: "Michroma", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    /* Улучшенная типографика */
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    
+    /* Плавность */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Небольшой отступ для лучшей кликабельности */
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+/* Двойное подчеркивание с градиентом (трендовый элемент) */
+.link::before,
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #d31412 20%, 
+        #1b51c7 80%, 
+        transparent 100%
+    );
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .link::after {
-	content: '';
-	position: absolute;
-	bottom: -3px;
-	left: 50%;
-	width: 0%;
-	height: 2px;
-	background: #d31412;
-	transition: width 0.5s ease;
-	transform: translateX(-50%);
+    bottom: -4px;
+    opacity: 0.5;
+    filter: blur(2px);
 }
 
+/* Hover эффекты */
 .link:hover {
-	color: #1b51c7;
-	text-shadow: 0 0 10px rgba(27, 81, 199, 0.8), 0 0 20px rgba(27, 81, 199, 0.6),
-		0 0 30px rgba(27, 81, 199, 0.4);
-	transition: color 0.5s ease, text-shadow 0.5s ease;
+    color: transparent;
+    background: linear-gradient(135deg, #d31412, #1b51c7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Стильное свечение */
+    text-shadow: 
+        0 0 15px rgba(211, 20, 18, 0.5),
+        0 0 30px rgba(27, 81, 199, 0.3);
+    
+    /* Легкая трансформация */
+    transform: translateY(-2px);
 }
 
+.link:hover::before,
 .link:hover::after {
-	width: 100%;
-	box-shadow: 0 0 10px #ff0000, 0 0 20px #d31412,
-		0 0 30px rgba(211, 20, 18, 0.5);
+    transform: scaleX(1);
+}
+
+/* Альтернативный вариант в стиле "киберпанк/глитч" */
+.link-glitch {
+    position: relative;
+    color: #fff;
+    font-family: "Michroma", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+/* Эффект глитча при наведении */
+.link-glitch:hover {
+    animation: glitch 0.3s infinite;
+    color: #fff;
+    text-shadow: 
+        -2px 0 #d31412,
+        2px 0 #1b51c7;
+}
+
+.link-glitch::before,
+.link-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.link-glitch:hover::before {
+    animation: glitch-offset 0.3s infinite;
+    color: #d31412;
+    opacity: 0.8;
+    transform: translate(-2px, -2px);
+    z-index: -1;
+}
+
+.link-glitch:hover::after {
+    animation: glitch-offset 0.3s reverse infinite;
+    color: #1b51c7;
+    opacity: 0.8;
+    transform: translate(2px, 2px);
+    z-index: -2;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch-offset {
+    0% { clip-path: inset(40% 0 61% 0); }
+    20% { clip-path: inset(92% 0 1% 0); }
+    40% { clip-path: inset(43% 0 1% 0); }
+    60% { clip-path: inset(25% 0 58% 0); }
+    80% { clip-path: inset(54% 0 7% 0); }
+    100% { clip-path: inset(58% 0 43% 0); }
+}
+
+/* Неоновый вариант с рамкой */
+.link-neon {
+    position: relative;
+    color: #fff;
+    font-family: "Michroma", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    transition: 0.3s;
+    display: inline-block;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.link-neon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(211, 20, 18, 0.4),
+        rgba(27, 81, 199, 0.4),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.link-neon:hover {
+    border-color: #d31412;
+    box-shadow: 
+        0 0 20px rgba(211, 20, 18, 0.5),
+        0 0 40px rgba(27, 81, 199, 0.3),
+        inset 0 0 20px rgba(211, 20, 18, 0.3);
+    transform: scale(1.05);
+}
+
+.link-neon:hover::before {
+    left: 100%;
 }
 
 /* Burger */
@@ -119,7 +271,21 @@
 }
 
 /* === Adaptive === */
+@media (max-width: 1310px) {
+.link {
+    letter-spacing: 0.5px;
+    font-size: .95rem;
+}
+}
+
 @media (max-width: 1200px) {
+	.link {
+    letter-spacing: 0.5px;
+    font-size: .7rem;
+}
+}
+
+@media (max-width: 1000px) {
 	.navDesktop {
 		display: none;
 	}
