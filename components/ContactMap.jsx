@@ -31,7 +31,7 @@ export default function ContactMap() {
       <div className={styles.mapContainer}>
         {isLoaded ? (
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.049105831329!2d19.938544!3d50.049683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0a04e7c6b1%3A0x9f8f8f8f8f8f8f8f!2sRybitwy%2022%2C%2030-722%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2553.290800830901!2d20.2163268!3d50.030816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471647811accf63f%3A0xd9e088c51799fd67!2zUGnEmWtuYSA3LCAzMi0wMDUgTmllcG_Fgm9taWNlLCDQn9C-0LvRjNGI0LA!5e0!3m2!1sru!2sua!4v1788265010945!5m2!1sru!2sua"
             className={styles.mapIframe}
             allowFullScreen=""
             loading="lazy"

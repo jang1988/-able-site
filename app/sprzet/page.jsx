@@ -33,6 +33,11 @@ const galleryImages = [
 		title: 'Koparko-ładowarka Caterpillar 432',
 	},
 	{
+		src: '/tech6.webp',
+		alt: 'Wiercenie',
+		title: 'GRUNDODRILL Tracto Technik 15 XPT',
+	},
+	{
 		src: '/tech4.webp',
 		alt: 'Instalacje podziemne',
 		title: 'Wciągarka Hydrauliczna Tesmec ARS405',

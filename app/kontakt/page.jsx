@@ -24,9 +24,9 @@ export const metadata = {
       ],
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': 'ul. Rybitwy 22/318',
-        'addressLocality': 'Kraków',
-        'postalCode': '30-722',
+        'streetAddress': 'ul. Piękna 7',
+        'addressLocality': 'Niepołomice',
+        'postalCode': '32-005',
         'addressCountry': 'PL'
       }
     }
@@ -93,12 +93,12 @@ export default function Kontakt() {
 							Biuro i centrala BIGBUD Sp. z o.o.
 						</p>
 						<a
-							href='https://maps.app.goo.gl/WCKbHnM7uk3b7BLy5'
+							href='https://maps.app.goo.gl/ajLdgz4XRGnSpwpT7'
 							target='_blank'
 							rel='noopener noreferrer'
 							className={styles.link}
 						>
-							ul. Rybitwy 22/318, 30-722 Kraków
+							ul. Piękna 7, 32-005 Niepołomice
 						</a>
 					</div>
 
