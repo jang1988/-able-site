@@ -56,6 +56,7 @@ export default function Sprzet() {
 									src={image.src}
 									alt={image.alt}
 									fill
+									sizes="(max-width: 1920px) 100vw, 100vw"
 									className={styles.image}
 									quality={85}
 									priority={index < 2}

@@ -1,9 +1,9 @@
-/* Анимации появления */
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
 		transform: translateY(20px);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0);
@@ -14,109 +14,317 @@
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
 }
 
-/* Обёртка плавно появляется */
 .wrapper {
 	position: relative;
-	width: 100vw;
+	width: 100%;
 	min-height: 80vh;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 60px 10px;
+
+	padding: 80px 20px;
 	overflow: hidden;
+
 	animation: fadeIn 0.8s ease forwards;
 }
 
-/* Фон */
+/* Декоративный фон */
+
 .wrapper::after {
 	content: '';
+
 	position: absolute;
+
 	top: 40%;
 	right: -10%;
+
 	width: 80vh;
 	height: 100vh;
+
 	background-image: url('/kV2.webp');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+
 	transform: translateY(-50%) rotate(270deg);
+
 	pointer-events: none;
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
 .wrapper::before {
 	content: '';
+
 	position: absolute;
+
 	top: 50%;
 	left: -25%;
+
 	width: 100vh;
 	height: 50vh;
+
 	background-image: url('/kV2.webp');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+
 	transform: translateY(-50%) rotate(90deg);
+
 	pointer-events: none;
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
+/* Основной блок */
+
 .container {
-	max-width: 900px;
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
+	position: relative;
+	z-index: 2;
+
+	width: 100%;
+	max-width: 1200px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 70px;
+
+	align-items: center;
+
 	animation: fadeInUp 1s ease forwards;
 }
 
-.title {
-	font-size: 40px;
-	font-weight: 700;
-	opacity: 0;
-	animation: fadeInUp 0.8s ease forwards;
-	animation-delay: 0.15s;
+/* Текст */
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
 }
 
 .text {
+	position: relative;
+
+	margin: 0;
+
 	font-size: 18px;
-	line-height: 1.6;
-	color: #000000;
-	letter-spacing: 0.5px;
+	font-weight: 400;
+
+	line-height: 1.75;
+
+	color: #292929;
+
+	letter-spacing: 0.15px;
+
 	opacity: 0;
+
 	animation: fadeInUp 0.8s ease forwards;
+
+	transition:
+		color 0.3s ease,
+		transform 0.3s ease;
 }
 
-/* Адаптив */
+/* BIGBUD */
+
+.text strong {
+	font-weight: 800;
+
+	color: #171717;
+
+	letter-spacing: 0.5px;
+}
+
+/* Первый абзац */
+
+.text:first-child {
+	padding-left: 24px;
+}
+
+.text:first-child::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	bottom: 4px;
+	width: 3px;
+	border-radius: 3px;
+	background: linear-gradient(180deg, #d31412, #1b51c7);
+	opacity: 0.9;
+}
+
+/* Анимация */
+
+.text:nth-of-type(1) {
+	animation-delay: 0.3s;
+}
+
+.text:nth-of-type(2) {
+	animation-delay: 0.45s;
+}
+
+.text strong {
+	font-weight: 800;
+
+	color: transparent;
+
+	background: linear-gradient(135deg, #d31412, #1b51c7);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	letter-spacing: 0.5px;
+}
+
+/* IMAGE */
+
+.imageBlock {
+	width: 100%;
+	min-height: 500px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 1.5rem;
+	cursor: pointer;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+	opacity: 0;
+	animation: fadeInUp 0.6s ease-out forwards;
+	transition:
+		transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+		box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.imageBlock:hover {
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+	z-index: 10;
+}
+
+.image {
+	object-fit: cover;
+
+	transition: transform 0.8s ease;
+}
+
+.imageBlock:hover .image {
+	transform: scale(1.05);
+}
+
+/* Затемнение */
+
+.imageOverlay {
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.55));
+
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+.imageBlock:hover .imageOverlay {
+	opacity: 0;
+}
+
+/* Рамка */
+
+.imageBlock::after {
+	content: '';
+
+	position: absolute;
+
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+
+	border: 1px solid rgba(255, 255, 255, 0.45);
+
+	pointer-events: none;
+}
+
+/* Badge */
+
+.imageBadge {
+	position: absolute;
+
+	left: 35px;
+	bottom: 35px;
+
+	display: flex;
+	flex-direction: column;
+
+	color: white;
+}
+
+.imageBadge span {
+	font-size: 13px;
+
+	letter-spacing: 4px;
+
+	opacity: 0.8;
+}
+
+.imageBadge strong {
+	margin-top: 6px;
+
+	font-size: 28px;
+
+	letter-spacing: 2px;
+}
+
 @media (max-width: 768px) {
 	.wrapper {
-		min-height: 70vh;
-		padding: 40px 20px;
-		align-items: flex-start;
-		padding-top: 80px;
+		min-height: auto;
+
+		padding: 60px 20px;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+
+		gap: 40px;
+	}
+
+	.title {
+		font-size: 46px;
+	}
+
+	.text {
+		font-size: 16px;
+	}
+
+	.imageBlock {
+		min-height: 380px;
+
+		order: -1;
+	}
+
+	.imageBadge {
+		left: 25px;
+		bottom: 25px;
+	}
+
+	.imageBadge strong {
+		font-size: 22px;
 	}
 
 	.wrapper::after {
 		top: 30%;
-		right: -15%;
-		width: 30vh;
-		height: 70vh;
+		right: -20%;
+
+		width: 60vh;
+		height: 80vh;
 	}
 
 	.wrapper::before {
-		top: 70%;
-		left: -15%;
-		width: 30vh;
-		height: 70vh;
-	}
+		top: 60%;
+		left: -45%;
 
-	.container {
-		gap: 20px;
-		max-width: 100%;
-		padding: 20px;
-		border-radius: 8px;
+		width: 80vh;
+		height: 40vh;
 	}
 }

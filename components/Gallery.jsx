@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styles from './Gallery.module.css';
+import Image from 'next/image'
+import styles from './Gallery.module.css'
 
 export default function Gallery() {
 	return (
@@ -10,8 +10,8 @@ export default function Gallery() {
 					<h1 className={styles.title}>Farmy Wiatrowe</h1>
 
 					<p className={styles.description}>
-						Projektujemy i realizujemy farmy wiatrowe, dostarczając nowoczesne
-						rozwiązania dla zrównoważonej i czystej energii przyszłości
+						Projektujemy i realizujemy farmy wiatrowe, dostarczając nowoczesne rozwiązania dla
+						zrównoważonej i czystej energii przyszłości
 					</p>
 				</div>
 
@@ -19,8 +19,8 @@ export default function Gallery() {
 				<div className={styles.gallery}>
 					<div className={`${styles.imageWrapper} ${styles.tall}`}>
 						<Image
-							src='/veter5.gif'
-							alt='Drilling operation'
+							src="/veter5.gif"
+							alt="Drilling operation"
 							fill
 							className={styles.image}
 							unoptimized
@@ -30,9 +30,10 @@ export default function Gallery() {
 
 					<div className={styles.imageWrapper}>
 						<Image
-							src='/veter2.webp'
-							alt='Transformer station'
+							src="/veter2.webp"
+							alt="Transformer station"
 							fill
+							sizes="(max-width: 1920px) 100vw, 100vw"
 							className={styles.image}
 						/>
 						<div className={styles.overlay}>Wysoka efektywność</div>
@@ -40,8 +41,9 @@ export default function Gallery() {
 
 					<div className={styles.imageWrapper}>
 						<Image
-							src='/veter3.webp'
-							alt='Underground cable line'
+							src="/veter3.webp"
+							sizes="(max-width: 1920px) 100vw, 100vw"
+							alt="Underground cable line"
 							fill
 							className={styles.image}
 						/>
@@ -50,8 +52,9 @@ export default function Gallery() {
 
 					<div className={`${styles.imageWrapper} ${styles.wide}`}>
 						<Image
-							src='/veter1.webp'
-							alt='Protective conduit system'
+							src="/veter1.webp"
+							sizes="(max-width: 1920px) 100vw, 100vw"
+							alt="Protective conduit system"
 							fill
 							className={styles.image}
 						/>
@@ -60,5 +63,5 @@ export default function Gallery() {
 				</div>
 			</div>
 		</section>
-	);
+	)
 }
