@@ -11,7 +11,7 @@ export default function PolitykaPrywatnosci() {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
-				<h1 className={styles.title}>Polityka Prywatności</h1>
+				<p className={styles.title}>Polityka Prywatności</p>
 
 				<div className={styles.section}>
 					<p className={styles.text}>

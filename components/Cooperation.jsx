@@ -22,7 +22,7 @@ function LogoCard({ partner, index }) {
 			<div className={styles.cardLogo}>
 				<Image
 					src={`/${partner.file}`}
-					alt={`${partner.name} logo`}
+					alt={`Logo firmy ${partner.name}`}
 					width={partner.width || 90}
 					height={partner.height || 44}
 					className={styles.cardImg}
@@ -61,15 +61,11 @@ function ScrollTrack({ direction = 'left', speed = 30 }) {
 
 			if (!isPaused) {
 				// Calculate movement
-				const moveDelta =
-					(direction === 'left' ? -speed : speed) * (deltaTime / 1000)
+				const moveDelta = (direction === 'left' ? -speed : speed) * (deltaTime / 1000)
 				positionRef.current += moveDelta
 
 				// Reset position when we've scrolled through one full set
-				if (
-					direction === 'left' &&
-					Math.abs(positionRef.current) >= totalWidth
-				) {
+				if (direction === 'left' && Math.abs(positionRef.current) >= totalWidth) {
 					positionRef.current = 0
 				} else if (direction === 'right' && positionRef.current >= totalWidth) {
 					positionRef.current = 0
@@ -116,7 +112,7 @@ function ScrollTrack({ direction = 'left', speed = 30 }) {
 export default function Cooperation() {
 	return (
 		<section className={styles.section}>
-			<p className={styles.partnersTitle}>Nasi Partnerzy Biznesowi</p>
+			<h2 className={styles.partnersTitle}>Nasi Partnerzy Biznesowi</h2>
 			<div className={styles.scrollRows}>
 				<ScrollTrack
 					direction="left"

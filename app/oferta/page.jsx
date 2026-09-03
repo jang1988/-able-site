@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export const metadata = {
-	title: 'Oferta | BIGBUD',
+	title: 'Oferta',
 
 	description:
 		'Profesjonalne usługi elektroenergetyczne: budowa i modernizacja linii napowietrznych i kablowych, stacji NN i SN, kanalizacji światłowodowej oraz kompletacja urządzeń.'

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'O nas | BIGBUD',
+  title: 'O nas',
   description:
     'Informacje o firmie BIGBUD — projekty energetyczne, doświadczenie i realizacje.',
 };

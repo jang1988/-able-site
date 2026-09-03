@@ -5,8 +5,8 @@ export default function Hero() {
 	return (
 		<section className={styles.hero}>
 			<Image
-				src="/budowa2.webp"
-				alt="Hero background"
+				src="/hero2.webp"
+				alt="Budowa i modernizacja linii energetycznych wysokiego i średniego napięcia"
 				fill
 				priority
 				className={styles.image}
@@ -14,10 +14,10 @@ export default function Hero() {
 
 			<div className={styles.overlay}>
 				<div className={styles.textBlock}>
-					<p className={styles.title}>
+					<h1 className={styles.title}>
 						Budowa, modernizacja i remont linii kablowych<br/>wysokiego, średniego i
 						niskiego napięcia.<br/>Skablowania linii napowietrznych
-					</p>
+					</h1>
 
 					<div className={styles.wrapper}>
 						<p className={styles.description}>

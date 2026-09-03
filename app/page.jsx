@@ -10,26 +10,28 @@ import Cooperation from '@/components/Cooperation'
 import ScrollAnimation from '@/components/ScrollAnimation'
 
 export const metadata = {
-  title: 'BIGBUD – Budowa i modernizacja linii energetycznych 6–30kV',
+  title:
+    'BIGBUD – Budowa i modernizacja linii energetycznych SN 6–30 kV',
+
   description:
-    'BIGBUD specjalizuje się w budowie i modernizacji linii napowietrznych i kablowych 6–30kV, budowie stacji elektroenergetycznych, farm wiatrowych oraz elektrowni fotowoltaicznych. Dostarczamy bezpieczne, efektywne i nowoczesne rozwiązania energetyczne.',
+    'BIGBUD realizuje budowę i modernizację linii energetycznych SN 6–30 kV, stacji elektroenergetycznych oraz infrastruktury OZE. Kompleksowa realizacja inwestycji energetycznych.',
+
   keywords: [
     'budowa linii energetycznych',
-    'modernizacja linii napowietrznych',
-    'linie kablowe 6-30kV',
+    'modernizacja linii energetycznych',
+    'linie energetyczne SN',
+    'linie SN 6–30 kV',
+    'linie napowietrzne',
+    'linie kablowe',
     'stacje elektroenergetyczne',
+    'budowa stacji elektroenergetycznych',
+    'modernizacja stacji elektroenergetycznych',
     'farmy wiatrowe',
     'elektrownie fotowoltaiczne',
-    'OZE',
     'infrastruktura energetyczna',
-    'energetyka',
+    'wykonawstwo elektroenergetyczne',
+    'OZE',
   ],
-  openGraph: {
-    title: 'BIGBUD – Profesjonalne rozwiązania energetyczne 6–30kV',
-    description:
-      'Budowa i modernizacja linii energetycznych, stacji elektroenergetycznych oraz instalacji OZE. Kompleksowe usługi dla biznesu i inwestorów.',
-    type: 'website',
-  },
 };
 
 export default function Home() {
