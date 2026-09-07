@@ -3,10 +3,26 @@ import Image from 'next/image'
 import styles from './page.module.css'
 
 export const metadata = {
-	title: 'Oferta',
+	title: 'Oferta – Usługi elektroenergetyczne | BIGBUD',
 
 	description:
-		'Profesjonalne usługi elektroenergetyczne: budowa i modernizacja linii napowietrznych i kablowych, stacji NN i SN, kanalizacji światłowodowej oraz kompletacja urządzeń.'
+		'BIGBUD oferuje kompleksowe usługi elektroenergetyczne: budowę i modernizację linii kablowych i napowietrznych 6–30 kV, stacji elektroenergetycznych NN i SN oraz kanalizacji światłowodowej.',
+
+	keywords: [
+		'usługi elektroenergetyczne',
+		'oferta BIGBUD',
+		'budowa linii energetycznych',
+		'modernizacja linii energetycznych',
+		'linie kablowe',
+		'linie napowietrzne',
+		'linie SN 6–30 kV',
+		'skablowanie linii napowietrznych',
+		'stacje elektroenergetyczne',
+		'stacje NN i SN',
+		'kanalizacja światłowodowa',
+		'wykonawstwo elektroenergetyczne',
+		'urządzenia elektroenergetyczne'
+	]
 }
 
 const services = [
@@ -30,6 +46,7 @@ export default function Oferta() {
 		<div className={styles.wrapper}>
 			<div className={styles.container}>
 				<div className={styles.content}>
+					<h1 className={styles.title}>Usługi elektroenergetyczne</h1>
 					<ul className={styles.list}>
 						{services.map((service, index) => (
 							<li

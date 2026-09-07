@@ -1,25 +1,21 @@
-import ReferencjeClient from '@/components/ReferencjeClient';
+import ReferencjeClient from '@/components/ReferencjeClient'
 
 export const metadata = {
-  title: 'Referencje | BIGBUD',
-  description: 'Galeria naszych referencji i realizacji projektów.',
-  keywords: ['referencje', 'projekty', 'galeria', 'BIGBUD'],
-  openGraph: {
-    title: 'Referencje | BIGBUD',
-    description: 'Galeria naszych referencji i realizacji projektów.',
-    type: 'website',
-    url: 'https://yourdomain.com/referencje',
-    images: [
-      {
-        url: '/referencje1.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Referencja 1',
-      },
-    ],
-  },
-};
+	title: 'Referencje | BIGBUD',
+	description:
+		'Poznaj nasze referencje i zrealizowane projekty w zakresie infrastruktury energetycznej, elektroenergetyki oraz prac budowlanych. BIGBUD.',
+	keywords: [
+		'referencje BIGBUD',
+		'realizacje BIGBUD',
+		'projekty energetyczne',
+		'infrastruktura energetyczna',
+		'infrastruktura elektroenergetyczna',
+		'realizacje energetyczne',
+		'budowa linii energetycznych',
+		'BIGBUD'
+	]
+}
 
 export default function Referencje() {
-  return <ReferencjeClient />;
+	return <ReferencjeClient />
 }

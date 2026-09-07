@@ -12,6 +12,119 @@
 	margin: 0 auto;
 }
 
+.title {
+	position: relative;
+	width: content-fit;
+	margin: 0 0 45px;
+	padding-bottom: 16px;
+	text-align: center;
+	font-size: clamp(28px, 1vw, 42px);
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: 0.5px;
+	padding-bottom: 11px;
+	font-family: 'Michroma', sans-serif;
+	text-transform: uppercase;
+	color: transparent;
+
+	background: linear-gradient(
+		105deg,
+		#252525 0%,
+		#252525 41%,
+
+		rgba(27, 81, 199, 0.7) 46%,
+		#ffffff 49%,
+		#ffffff 51%,
+		rgba(95, 168, 255, 0.7) 54%,
+
+		#252525 59%,
+		#252525 100%
+	);
+
+	background-size: 280% 100%;
+	background-position: 100% 0;
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	/* text-align: center; */
+	animation: textEnergy 3.5s ease-in-out;
+}
+
+@keyframes textEnergy {
+	0% {
+		background-position: 100% 0;
+	}
+
+	8% {
+		background-position: 100% 0;
+	}
+
+	45% {
+		background-position: 0% 0;
+	}
+
+	50% {
+		background-position: 0% 0;
+	}
+
+	58% {
+		background-position: 0% 0;
+	}
+
+	100% {
+		background-position: 0% 0;
+	}
+}
+
+/* Энергетическая линия */
+.title::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+
+	background: linear-gradient(90deg, #d31412 0%, #d31412 35%, #1b51c7 70%, #5fa8ff 100%);
+
+	box-shadow:
+		0 0 5px rgba(27, 81, 199, 0.35),
+		0 0 14px rgba(27, 81, 199, 0.15);
+
+	/* сужение по краям */
+	-webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+
+	mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+
+	animation: energyLine 5s ease-in-out infinite;
+}
+
+@keyframes energyLine {
+	0%,
+	40%,
+	100% {
+		filter: brightness(1);
+		box-shadow:
+			0 0 5px rgba(27, 81, 199, 0.35),
+			0 0 14px rgba(27, 81, 199, 0.15);
+	}
+
+	50% {
+		filter: brightness(1.8);
+		box-shadow:
+			0 0 6px rgba(27, 81, 199, 0.8),
+			0 0 18px rgba(27, 81, 199, 0.6),
+			0 0 30px rgba(27, 81, 199, 0.3);
+	}
+
+	58% {
+		filter: brightness(1);
+	}
+}
+
 .galleryGrid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -54,23 +167,23 @@
 
 /* Заголовок поверх изображения */
 .imageTitle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  padding: 20px 16px 12px;
-  color: white;
-  z-index: 2;
-  transition: all 0.3s ease;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+	padding: 20px 16px 12px;
+	color: white;
+	z-index: 2;
+	transition: all 0.3s ease;
 }
 
 .imageTitle span {
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  display: block;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	display: block;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .galleryItem:hover .imageTitle {
@@ -95,11 +208,36 @@
 		grid-template-columns: 1fr;
 		grid-auto-rows: 240px;
 	}
+
+	.title {
+		margin: 0 auto 30px;
+		padding-bottom: 11px;
+
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.title::after {
+		left: 50%;
+		width: 65px;
+		height: 3px;
+		transform: translateX(-50%);
+	}
+
+	.title::before {
+		display: none;
+	}
 }
 
 @media (max-width: 480px) {
 	.galleryGrid {
 		grid-auto-rows: 200px;
 		gap: 15px;
+	}
+
+	.title {
+		margin-bottom: 25px;
+		font-size: 21px;
+		letter-spacing: 0.3px;
 	}
 }

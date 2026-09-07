@@ -1,56 +1,63 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import Image from 'next/image'
+import styles from './page.module.css'
 
 export const metadata = {
-	title: 'Sprzęt | BIGBUD',
-	description: 'Galeria naszych realizacji energetycznych oraz sprzętu używanego przy realizacjach BIGBUD.',
-	openGraph: {
-		title: 'Sprzęt | BIGBUD',
-		description: 'Zobacz sprzęt, którego używamy przy projektach energetycznych i infrastrukturalnych.',
-		images: ['/tech1.webp'],
-		type: 'website',
-		locale: 'pl_PL',
-	},
-	alternates: {
-		canonical: '/sprzet',
-	},
-};
+	title: 'Sprzęt budowlany i energetyczny | BIGBUD',
+	description:
+		'Sprzęt budowlany i energetyczny BIGBUD. Minikoparki, koparko-ładowarki, wciągarki hydrauliczne, wiertnice oraz samochody z HDS wykorzystywane przy realizacji inwestycji energetycznych i infrastrukturalnych.',
+	keywords: [
+		'sprzęt budowlany',
+		'sprzęt energetyczny',
+		'maszyny budowlane',
+		'sprzęt budowlany BIGBUD',
+		'maszyny do prac energetycznych',
+		'minikoparka',
+		'koparko-ładowarka',
+		'wiertnica',
+		'wciągarka hydrauliczna',
+		'samochód HDS'
+	]
+}
 
 const galleryImages = [
 	{
 		src: '/tech1.webp',
-		alt: 'Farmy wiatrowe',
-		title: 'Minikoparka cat 302.7',
+		alt: 'Minikoparka CAT 302.7',
+		title: 'Minikoparka CAT 302.7'
 	},
 	{
 		src: '/tech2.webp',
-		alt: 'Panele słoneczne',
-		title: 'Samochód ciężarowy z HDS VOLVO FE 320 HMF 2120',
+		alt: 'Samochód ciężarowy Volvo FE 320 z HDS HMF 2120',
+		title: 'Samochód ciężarowy z HDS VOLVO FE 320 HMF 2120'
 	},
 	{
 		src: '/tech3.webp',
-		alt: 'Turbiny wiatrowe',
-		title: 'Koparko-ładowarka Caterpillar 432',
+		alt: 'Koparko-ładowarka Caterpillar 432',
+		title: 'Koparko-ładowarka Caterpillar 432'
 	},
 	{
 		src: '/tech6.webp',
-		alt: 'Wiercenie',
-		title: 'GRUNDODRILL Tracto Technik 15 XPT',
+		alt: 'Wiertnica GRUNDODRILL Tracto Technik 15 XPT',
+		title: 'GRUNDODRILL Tracto Technik 15 XPT'
 	},
 	{
 		src: '/tech4.webp',
-		alt: 'Instalacje podziemne',
-		title: 'Wciągarka Hydrauliczna Tesmec ARS405',
-	},
-];
+		alt: 'Wciągarka hydrauliczna Tesmec ARS405',
+		title: 'Wciągarka Hydrauliczna Tesmec ARS405'
+	}
+]
 
 export default function Sprzet() {
 	return (
 		<div className={styles.section}>
 			<div className={styles.container}>
+				<h1 className={styles.title}>Sprzęt budowlany i energetyczny</h1>
 				<div className={styles.galleryGrid}>
 					{galleryImages.map((image, index) => (
-						<div key={index} className={styles.galleryItem}>
+						<div
+							key={index}
+							className={styles.galleryItem}
+						>
 							<div className={styles.imageContainer}>
 								<Image
 									src={image.src}
@@ -70,5 +77,5 @@ export default function Sprzet() {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }

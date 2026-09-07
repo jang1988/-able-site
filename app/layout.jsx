@@ -15,8 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
 	title: {
-		default: 'BIGBUD – Budowa i modernizacja infrastruktury energetycznej',
-		template: '%s | BIGBUD'
+		default: 'BIGBUD – Budowa i modernizacja infrastruktury energetycznej'
 	},
 
 	description:
