@@ -68,9 +68,9 @@ export default function PolitykaPrywatnosci() {
 					<p className={styles.text}>
 						BIGBUD spółka z ograniczoną odpowiedzialnością
 						<br />
-						ul. Rybitwy 22/318
+						ul. Piękna 7
 						<br />
-						30-722 Kraków
+						32-005 Niepołomice
 						<br />
 						KRS: 0001117272
 						<br />
@@ -680,9 +680,9 @@ export default function PolitykaPrywatnosci() {
 					<p className={styles.text}>
 						BIGBUD sp. z o.o.
 						<br />
-						ul. Rybitwy 22/318
+						ul. Piękna 7
 						<br />
-						30-722 Kraków
+						32-005 Niepołomice
 						<br />
 						e-mail: <strong>biuro@bigbudcom.net</strong>
 					</p>

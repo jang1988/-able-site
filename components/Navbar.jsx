@@ -52,9 +52,10 @@ export default function Navbar() {
 					<Image
 						src="/logo2.webp"
 						alt="logo"
-						width={104}
-						height={29}
+						width={2172}
+						height={547}
 						priority
+						className={styles.imagelogo}
 					/>
 				</Link>
 

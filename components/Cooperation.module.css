@@ -1,157 +1,472 @@
 .section {
-	background-color: #f3f3f3;
-	padding: 60px 40px;
-	display: flex;
+  width: 100%;
+  padding: 50px 40px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: center;
 	flex-direction: column;
-	align-items: center;
-	width: 100%;
+  overflow: hidden;
 }
 
 .partnersSection {
-	width: 100%;
-	max-width: 1400px;
+	margin: 0 auto;
+  width: 100%;
+  /* max-width: 1400px; */
 }
+
+/* =========================================
+   TITLE
+========================================= */
+
+.titleMeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin-bottom: 16px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+
 
 .partnersTitle {
-	font-size: 3rem;
-	font-weight: 800;
-	line-height: 1.1;
-	margin: 0 0 2rem 0;
-	color: #000000;
-	background-clip: text;
-	letter-spacing: -0.5px;
-	text-align: center;
+  margin: 0;
+
+  text-align: center;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+
+  color: #111;
 }
+
+.partnersSubtitle {
+  max-width: 540px;
+
+  margin: 18px auto 55px;
+
+  text-align: center;
+
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: #777;
+}
+
+/* =========================================
+   ROWS
+========================================= */
 
 .scrollRows {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
 }
+
+/* =========================================
+   SLIDER OUTER
+========================================= */
 
 .scrollOuter {
-	overflow: hidden;
-	width: 100%;
-	position: relative;
-	mask-image: linear-gradient(
-		to right,
-		transparent 0%,
-		black 10%,
-		black 90%,
-		transparent 100%
-	);
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding: 20px 0;
+
+  /*
+   * Smooth fade on both sides
+   */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 7%,
+    black 93%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 7%,
+    black 93%,
+    transparent 100%
+  );
 }
+
+/* =========================================
+   TRACK
+========================================= */
 
 .scrollTrack {
-	display: flex;
-	gap: 24px;
-	width: max-content;
-	will-change: transform;
-	backface-visibility: hidden;
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  width: max-content;
+
+  will-change: transform;
+
+  backface-visibility: hidden;
+
+  transform: translate3d(0, 0, 0);
 }
 
-/* ── Logo card ── */
+/* =========================================
+   CARD
+========================================= */
+
 .card {
-	background: #ffffff;
-	border-radius: 1.5rem;
-	padding: 3rem;
-	position: relative;
+  position: relative;
+
+  width: 210px;
+  height: 145px;
+
+  flex: 0 0 210px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid rgba(0, 0, 0, 0.07);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.035);
+
+  animation: cardAppear 0.6s ease-out both;
+
+  transition:
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
 }
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.cardNumber {
+  position: absolute;
+
+  top: 13px;
+  left: 16px;
+
+  font-size: 0.6rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  color: #aaa;
+}
+
+/* =========================================
+   LOGO
+========================================= */
 
 .cardLogo {
-	filter: grayscale(50%);
-	transition: filter 0.3s ease;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 60px;
-}
+  width: 100%;
+  height: 65px;
 
-.card:hover .cardLogo {
-	filter: grayscale(0%);
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  filter: grayscale(0%);
+
+  opacity: 0.6;
+
+  transition:
+    filter 0.4s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .cardImg {
-	object-fit: contain;
-	width: auto;
-	height: auto;
-	transition: transform 0.3s ease;
+  width: auto;
+  height: auto;
+
+  max-width: 140px;
+  max-height: 55px;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.4s ease;
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+.cardName {
+  margin-top: 10px;
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  color: #999;
+
+  transition:
+    color 0.4s ease;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.03);
+
+  background: #fff;
+
+  border-color:
+    rgba(0, 0, 0, 0.14);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.1);
+
+  z-index: 5;
+}
+
+.card:hover .cardLogo {
+  filter: grayscale(0%);
+
+  opacity: 1;
+
+  transform: translateY(-2px);
 }
 
 .card:hover .cardImg {
-	transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-
-/* ==== Адаптив ==== */
-@media (max-width: 1100px) {
-	.inner {
-		grid-template-columns: 1fr;
-		gap: 3rem;
-	}
-
-	.textBlock {
-		order: 1;
-		text-align: center;
-	}
-
-	.gallery {
-		order: 2;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	}
+.card:hover .cardName {
+  color: #111;
 }
 
-/* ====== МОБИЛЬНАЯ ВЕРСИЯ ====== */
+/* =========================================
+   FOOTER
+========================================= */
+
+.partnersFooter {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 45px;
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color: #999;
+}
+
+.footerDot {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #111;
+
+  opacity: 0.35;
+}
+
+/* =========================================
+   CARD APPEAR
+========================================= */
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 80px 25px;
+  }
+
+  .card {
+    width: 190px;
+    height: 135px;
+
+    flex-basis: 190px;
+  }
+
+  .cardImg {
+    max-width: 125px;
+    max-height: 50px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 700px) {
-	.section {
-		padding: 60px 20px;
-	}
+  .section {
+    padding: 70px 15px;
+  }
 
-	.title {
-		font-size: 2rem;
-	}
+  .titleMeta {
+    font-size: 0.6rem;
 
-	.description {
-		font-size: 1.1rem;
-	}
+    letter-spacing: 0.18em;
+  }
 
-	.textBlock {
-		padding: 2rem;
-	}
+  .titleLine {
+    width: 20px;
+  }
 
-	.authorBlock {
-		flex-direction: column;
-		gap: 1rem;
-		text-align: center;
-	}
+  .partnersTitle {
+    font-size: 2rem;
+  }
 
-	.gallery {
-		grid-template-columns: 1fr;
-		gap: 1rem;
-	}
+  .partnersSubtitle {
+    font-size: 0.9rem;
 
-	.partnersTitle {
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
-	}
+    margin-bottom: 35px;
+  }
 
-	.card {
-		min-width: 130px;
-		height: 100px;
-		gap: 8px;
-	}
+  .scrollRows {
+    gap: 10px;
+  }
 
-	.cardLogo {
-    padding: 0;
-		min-width: 100%;
-    height: 100%;
-    object-fit: contain;
-	}
+  .scrollOuter {
+    padding: 16px 0;
 
-	.cardImg {
-		max-width: 70px;
-		max-height: 35px;
-	}
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
+  }
+
+  .card {
+    width: 160px;
+    height: 115px;
+
+    flex-basis: 160px;
+
+    border-radius: 18px;
+  }
+
+  .cardLogo {
+    height: 50px;
+  }
+
+  .cardImg {
+    max-width: 105px;
+    max-height: 40px;
+  }
+
+  .cardName {
+    margin-top: 6px;
+
+    font-size: 0.58rem;
+  }
+
+  .cardNumber {
+    top: 10px;
+    left: 12px;
+
+    font-size: 0.52rem;
+  }
+
+  .partnersFooter {
+    margin-top: 30px;
+
+    gap: 8px;
+
+    font-size: 0.52rem;
+
+    letter-spacing: 0.12em;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .cardLogo,
+  .cardImg,
+  .cardName {
+    transition: none;
+  }
 }

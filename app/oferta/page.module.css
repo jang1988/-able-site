@@ -74,7 +74,7 @@
 	width: 100%;
 	max-width: 1300px;
 	display: grid;
-	grid-template-columns: 1.2fr 0.8fr;
+	grid-template-columns: 1.1fr 0.9fr;
 	gap: 70px;
 	align-items: center;
 }
@@ -320,7 +320,7 @@
 
 .image {
 	object-fit: cover;
-	object-position: 75% center;
+	object-position: 65% center;
 	transition: transform 0.8s ease;
 }
 

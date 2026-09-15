@@ -7,7 +7,9 @@ import styles from './ReferencjeClient.module.css'
 const images = [
 	{ src: '/referencje1.webp', alt: 'Referencja 1' },
 	{ src: '/referencje2.webp', alt: 'Referencja 2' },
-	{ src: '/referencje3.webp', alt: 'Referencja 3' }
+	{ src: '/referencje3.webp', alt: 'Referencja 3' },
+	{ src: '/referencje4.webp', alt: 'Referencja 4' },
+	{ src: '/referencje5.webp', alt: 'Referencja 5' }
 ]
 
 export default function ReferencjeClient() {

@@ -64,7 +64,7 @@ export default function Oferta() {
 
 				<div className={styles.imageBlock}>
 					<Image
-						src="/oferta2.png"
+						src="/oferta2.webp"
 						alt="BIGBUD – usługi elektroenergetyczne"
 						fill
 						sizes="(max-width: 1920px) 100vw, 100vw"
